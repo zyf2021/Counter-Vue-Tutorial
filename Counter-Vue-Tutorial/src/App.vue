@@ -1,3 +1,4 @@
+<!--
 <script setup>
   import {ref} from "vue";
 
@@ -10,9 +11,27 @@
   const subtractFromCount = () => {
     count.value = count.value - 1
   }
+</script> -->
 
-
+<script>
+  export default {
+    data() {
+      return {
+        count: 0;
+      }
+    },
+    methods: {
+      addToCount() {
+        this.count = this.count + 1
+      },
+      subtractFromCount() {
+        this.count = this.count - 1
+      }
+    }
+  }
 </script>
+
+
 
 <template>
   <main>
