@@ -1,7 +1,16 @@
 <script setup>
   import {ref} from "vue";
 
-  const count = ref(0);
+  const count = ref(10);
+
+  const addToCount = () => {
+    count.value = count.value + 1;
+  }
+
+  const subtractFromCount = () => {
+    count.value = count.value - 1
+  }
+
 
 </script>
 
@@ -10,8 +19,8 @@
     <div>
       <h4>Текущее значение счетчика</h4>
       <h1>{{ count }}</h1>
-      <button @click="count--">-</button>
-      <button @click=" count++">+</button>
+      <button @click = "subtractFromCount()">-</button>
+      <button @click="addToCount()">+</button>
     </div>
   </main>
 </template>
